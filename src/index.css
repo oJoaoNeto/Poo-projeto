@@ -1,0 +1,300 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+h1, h3 {
+  color: #1c2e4a;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin: 12px 0;
+  border: 0.5px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  margin: 12px 0;
+  border: 0.5px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: white;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.front {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.front:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+#resultado {
+  margin-top: 25px;
+  font-weight: 600;
+  color: #2c3e50;
+  background-color: #e8f9f7;
+  border: 1px solid #1adbb5;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+/* Tab Navigation */
+.tab-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-button {
+  background-color: transparent;
+  border: none;
+  padding: 14px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: #555;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px; /* Align with the container's border */
+}
+
+.tab-button:hover {
+  color: #007bff;
+}
+
+.tab-button.active {
+  color: #007bff;
+  border-bottom: 3px solid #007bff;
+}
+
+.tabcontent {
+  display: none;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+}
+
+.tab {
+  border-bottom: none;
+}
+.tabcontent {
+  border: 1px solid #e0e0e0;
+  border-top: 2px solid #007bff;
+}
+
+/* --- Estilos de Botões --- */
+.btn {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+.btn-secondary:hover {
+  background-color: #5a6268;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+.form-group input, .form-group select {
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+.seletor-turma {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 15px;
+}
+
+/* --- Estilos da Listagem --- */
+.listagem-container {
+  text-align: left;
+  padding: 10px;
+}
+
+.turma-info {
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.situacao-titulo {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid;
+}
+
+.aluno-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.aluno-table th, .aluno-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.aluno-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #212529;
+}
+
+.aluno-table tbody tr:hover {
+  background-color: #f1f3f5;
+}
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+}
+
+.status-aprovado {
+  background-color: #28a745;
+}
+
+.status-recuperacao {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.status-reprovado {
+  background-color: #dc3545;
+}
+/* Adicione este código ao final do seu arquivo index.css */
+
+.situacao-titulo {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid;
+  font-size: 1.1rem;
+}
+
+.situacao-titulo.aprovado {
+  border-color: #28a745;
+  color: #28a745;
+}
+
+.situacao-titulo.recuperacao {
+  border-color: #ffc107;
+  color: #c79a0a;
+}
+
+.situacao-titulo.reprovado {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.aluno-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.aluno-item {
+  background-color: #f8f9fa;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  border-left: 5px solid #6c757d;
+  font-size: 15px;
+}
